@@ -24,4 +24,9 @@ export default {
 li:first-child {
     border-bottom: 2px solid $primary-font-color;
 }
+
+li {
+    font-weight: bold;
+    line-height: 12px;
+}
 </style>

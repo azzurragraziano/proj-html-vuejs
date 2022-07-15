@@ -19,16 +19,22 @@
         </ul>
     </nav>
 
+    <!-- jumbotron -->
+    <div class="jumbo">
+        <JumboContent/>
+    </div>
   </header>
 </template>
 
 <script>
 import HeaderMenu from '@/components/HeaderMenu.vue'
+import JumboContent from '@/components/JumboContent.vue'
 
 export default {
     name: "HeaderComponent",
     components: {
-        HeaderMenu
+        HeaderMenu,
+        JumboContent
     },
     data() {
     return {
@@ -82,12 +88,16 @@ export default {
 
 header {
     background-image: url('../assets/img/hero-header-bakery.jpg');
+    background-size: cover;
+    background-position: center;
     color: $primary-font-color;
 
     nav {
         align-items: flex-end;
 
         .ms_logo {
+            margin-left: 30px;
+
             img {
                 height: 100px;
             }
@@ -95,10 +105,14 @@ header {
 
         ul {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 12px;
         }
+    }
+
+    .jumbo {
+        margin: 0 10px 0 75px;
     }
 }
 </style>
