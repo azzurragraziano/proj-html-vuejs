@@ -136,12 +136,34 @@
                 </div>
             </div>
         </section>
+
+        <!-- bakery process -->
+        <section class="bakery-process">
+            <div class="ms_container">
+                
+                <div class="first-third-bakery-process">
+                    <img src="../assets/img/bakery-process-1.jpg" alt="first bakery process">
+                </div>
+                
+                <div class="row gy-6">
+                    <div class="col">
+                        <img src="../assets/img/bakery-process-2.jpg" alt="second bakery process">
+                    </div>
+                    <div class="col ms_text_col"></div>
+                </div>
+
+                <div class="first-third-bakery-process">
+                    <img src="../assets/img/bakery-process-3.jpg" alt="third bakery process">
+                </div>
+
+            </div>
+        </section>
     </main>
 </template>
 
 <script>
 export default {
-   
+   name: "MainComponent"
 }
 </script>
 
@@ -160,6 +182,7 @@ export default {
         }
 
     }
+
     .corp-wed {
         text-align: center;
     }
@@ -192,6 +215,28 @@ export default {
                     font-size: 0.8rem;
                     color: $primary-font-color;
                 }
+            }
+        }
+    }
+
+    .bakery-process {
+        .ms_text_col {
+            background-color: #e9dedc;
+            margin-left: 1.5rem;
+            margin-right: 13px;
+        }
+
+        .col {
+            margin-block: 3rem;
+
+            &:first-child {
+                margin-right: 1.5rem;
+            }
+
+            img {
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                object-position: right;
             }
         }
     }
