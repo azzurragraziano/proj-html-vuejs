@@ -143,17 +143,53 @@
                 
                 <div class="first-third-bakery-process">
                     <img src="../assets/img/bakery-process-1.jpg" alt="first bakery process">
+                    <div class="overlay">
+                        <div class="top_left">
+                            Tell us what you have in mind
+                        </div>
+
+                        <div class="top-right">
+                            01
+                        </div>
+
+                        <div class="bottom-right">
+                            <div class="ms_categories">
+                                manual ingredient selection
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium tempore, nulla porro nemo laborum dolores nam quaerat iste itaque quam. Autem, velit perferendis quidem assumenda id repellendus obcaecati expedita.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="row gy-6">
                     <div class="col">
                         <img src="../assets/img/bakery-process-2.jpg" alt="second bakery process">
+                        <div class="overlay">
+                            <div class="top_left">
+                                We Start Baking
+                            </div>
+
+                            <div class="top-right">
+                                02
+                            </div>
+                        </div>
                     </div>
                     <div class="col ms_text_col"></div>
                 </div>
 
                 <div class="first-third-bakery-process">
                     <img src="../assets/img/bakery-process-3.jpg" alt="third bakery process">
+                    <div class="overlay">
+                        <div class="top_left">
+                            Delivery to your home
+                        </div>
+
+                        <div class="top-right">
+                            03
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -220,6 +256,55 @@ export default {
     }
 
     .bakery-process {
+        .overlay {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+
+            color: $tertiary-font-color;
+
+            .top_left {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                font-size: 2rem;
+                font-weight: bold;
+                font-family: 'Playfair Display', serif;
+            }
+
+            .top-right {
+                position: absolute;
+                top: 50px;
+                right: 50px;
+                font-size: 3rem;
+                font-family: 'Work Sans', sans-serif;
+                font-weight: 100;
+            }
+
+            .bottom-left {
+                position: absolute;
+                bottom: 70px;
+                left: 50px;
+                font-size: 2rem;
+                width: 350px;
+                font-size: 0.8rem;
+
+            }
+
+            .bottom-right {
+                position: absolute;
+                bottom: 70px;
+                right: 50px;
+                font-size: 2rem;
+                width: 350px;
+                font-size: 0.8rem;
+            }
+        }
+
         .ms_text_col {
             background-color: #e9dedc;
             margin-left: 1.5rem;
@@ -231,6 +316,11 @@ export default {
 
             &:first-child {
                 margin-right: 1.5rem;
+                position: relative;
+
+                .overlay {
+                    width: 96%;
+                }
             }
 
             img {
@@ -239,5 +329,15 @@ export default {
                 object-position: right;
             }
         }
+
+        .first-third-bakery-process {
+            position: relative; 
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        
     }
 </style>
