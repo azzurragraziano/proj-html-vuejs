@@ -1,15 +1,15 @@
 <template>
     <div class="row">
         <div class="col-4 ms_text_col">
-            <span>
+            <span class="ms_categories">
                 fresh & tasty bakery every day
             </span>
-            <h1 class="ms_title_font">
+            <h1 class="ms_font">
                 The Perfect Fresh Bread
             </h1>
-            <span>
+            <div>
                 Architecto debitis laborum totam, voluptate officiis atque obcaecati provident! Ipsam, ducimus! Adipisci cumque autem id veniam dolor.
-            </span>
+            </div>
 
             <a type="button" class="btn btn-light ms_btn">Explore our products</a>
         </div>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="ms_box">
-                <span>$39</span>
+                <span id="price"> <sup>$</sup>39</span>
                 <div>On Sale</div>
             </div>
         </div>
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-
+    name: "JumboContent"
 }
 </script>
 
@@ -42,13 +42,8 @@ export default {
     .ms_text_col {
         padding: 10rem 0 14rem;
 
-        span:first-child {
-            text-transform: uppercase;
-            font-size: 11px;
-        }
-
-        span {
-            color: gray;
+        div {
+            color: $secondary-font-color;
         }
 
         h1 {
@@ -73,15 +68,26 @@ export default {
         .ms_box {
             background-color: white;
             text-align: center;
-            vertical-align: middle;
             width: 50px;
             height: 50px;
             color: black;
-            font-size: 10px;
+            font-size: 8px;
             border-radius: 5px;
             box-shadow: 1px 1px 19px 0px gray;
             margin-block: 3px;
-            padding-block: 12px;
+            padding-block: 6px;
+
+            #price {
+                color: #4caf50;
+                font-size: 18px;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            i {
+                font-size: 18px;
+                margin-block: 4px;
+            }
         }
     }
 }

@@ -93,26 +93,27 @@ header {
     color: $primary-font-color;
 
     nav {
-        align-items: flex-end;
+      align-items: flex-end;
 
-        .ms_logo {
-            margin-left: 30px;
+      .ms_logo {
+        margin-left: 30px;
 
-            img {
-                height: 100px;
-            }
+        img {
+          height: 100px;
+          width: auto;
         }
+      }
 
-        ul {
-            display: flex;
-            justify-content: space-evenly;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
     }
 
     .jumbo {
-        margin: 0 10px 0 75px;
+      margin: 0 0.62rem 0 4.7rem;
     }
 }
 </style>
