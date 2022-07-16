@@ -7,7 +7,7 @@
             <h1 class="ms_font">
                 The Perfect Fresh Bread
             </h1>
-            <div>
+            <div class="ms_description">
                 Architecto debitis laborum totam, voluptate officiis atque obcaecati provident! Ipsam, ducimus! Adipisci cumque autem id veniam dolor.
             </div>
 
@@ -41,10 +41,6 @@ export default {
 .row {
     .ms_text_col {
         padding: 10rem 0 14rem;
-
-        div {
-            color: $secondary-font-color;
-        }
 
         h1 {
             font-weight: 800;
