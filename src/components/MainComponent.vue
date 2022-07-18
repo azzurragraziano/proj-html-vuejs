@@ -252,6 +252,133 @@
 
             </div>
         </section>
+
+        <!-- locations -->
+        <section class="locations">
+            <div class="ms_container">
+
+                <!--  info -->
+                <div class="ms_info">
+                    <div class="ms_categories">
+                        locations
+                    </div>
+
+                    <h2 class="ms_font">
+                        Visit our Bakeries
+                    </h2>
+                </div>
+
+                <div class="row">
+
+                    <!-- col -->
+                    <div id="lightblue" class="col">
+
+                        <!-- card -->
+                        <div class="ms_card">
+
+                            <!-- image card -->
+                            <div class="image-card">
+                                <img src="../assets/img/new-york-bk.jpg" alt="New York bakery">
+                            </div>
+
+                            <!-- text card -->
+                            <div class="text_card">
+                                
+                                <!-- city -->
+                                <h2 class="ms_font">
+                                    New York
+                                </h2>
+
+                                <!-- other info -->
+                                <div class="row">
+
+                                    <!-- tel number -->
+                                    <div class="col">
+                                        <div class="ms_categories">
+                                            call us
+                                        </div>
+
+                                        <div class="ms_categories">
+                                            1.800.458.556
+                                        </div>
+                                    </div>
+
+                                    <!-- working hours -->
+                                    <div class="col">
+                                        <div class="ms_categories">
+                                            open all week
+                                        </div>
+
+                                        <div class="ms_categories">
+                                            9:00 am - 6:00 pm
+                                        </div>
+                                    </div>
+
+                                    <!-- btn -->
+                                    <div class="col">
+                                        <a href="#" class="btn btn-light btn_white">View Map</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- col -->
+                    <div id="lightpink" class="col">
+
+                        <!-- card -->
+                        <div class="ms_card">
+
+                            <!-- image card -->
+                            <div class="image-card">
+                                <img src="../assets/img/london-bk.jpg" alt="London bakery">
+                            </div>
+
+                            <!-- text card -->
+                            <div class="text_card">
+
+                                <!-- city -->
+                                <h2 class="ms_font">
+                                    London
+                                </h2>
+
+                                <!-- other info -->
+                                <div class="row">
+
+                                    <!-- tel number -->
+                                    <div class="col">
+                                        <div class="ms_categories">
+                                            call us
+                                        </div>
+
+                                        <div class="ms_categories">
+                                            1.800.458.556
+                                        </div>
+                                    </div>
+
+                                    <!-- working hours -->
+                                    <div class="col">
+                                        <div class="ms_categories">
+                                            open all week
+                                        </div>
+
+                                        <div class="ms_categories">
+                                            9:00 am - 6:00 pm
+                                        </div>
+                                    </div>
+
+                                    <!-- btn -->
+                                    <div class="col">
+                                        <a href="#" class="btn btn-light btn_white">View Map</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </template>
 
@@ -418,5 +545,40 @@ export default {
         }
 
         
+    }
+
+    .locations {
+        .ms_info {
+            text-align: center;
+        }
+
+        .col {
+            padding: 0;
+            text-align: center;
+
+            &#lightblue {
+                background-color: #e1f6fd;
+            }
+
+            &#lightpink {
+                background-color: #fae9ec;
+            }
+
+            .ms_card {
+                .text_card {
+                    padding: 1rem 3rem 2rem;  
+                    
+                    .col {
+                        .ms_categories:first-child {
+                            font-size: 9px;
+                        }
+                                
+                        .btn_white {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 </style>

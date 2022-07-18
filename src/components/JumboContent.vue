@@ -11,7 +11,7 @@
                 Architecto debitis laborum totam, voluptate officiis atque obcaecati provident! Ipsam, ducimus! Adipisci cumque autem id veniam dolor.
             </div>
 
-            <a type="button" class="btn btn-light ms_btn">Explore our products</a>
+            <a type="button" class="btn btn-light btn_white">Explore our products</a>
         </div>
 
         <div class="col-8 ms_box_container">
@@ -44,14 +44,6 @@ export default {
 
         h1 {
             font-weight: 800;
-        }
-
-        .ms_btn {
-            margin-top: 30px;
-            font-size: 12px;
-            color: $primary-font-color;
-            font-weight: 600;
-            border-radius: 5px;
         }
     }
 
