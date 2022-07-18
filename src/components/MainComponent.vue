@@ -379,6 +379,7 @@
             </div>
         </section>
         
+        <!-- social -->
         <section class="social">
             <div class="ms_container">
                 <div class="row">
@@ -423,6 +424,22 @@
                         <img src="../assets/img/social-6.jpg" alt="">
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- banner -->
+        <section class="banner">
+            <div class="text">
+
+                <div class="ms_categories">
+                    try our seasonal products
+                </div>
+
+                <div class="ms_font">
+                    Order for pick-up or delivery to your home
+                </div>
+
+                <a href="#" class="btn btn-light btn_white">Shop Now</a>
             </div>
         </section>
 
@@ -653,6 +670,23 @@ export default {
                     font-size: 9px;
                     padding: 8px 18px;
                 }
+            }
+        }
+    }
+
+    .banner {
+        background-image: url('../assets/img/call-to-action-bg.jpg');
+        background-size: cover;
+        background-position: top;
+
+        .text {
+            margin: 10rem;
+            padding-block: 3.5rem;
+            width: 530px; 
+
+            .ms_font {
+                color: white;
+                font-size: 2rem;
             }
         }
     }
