@@ -141,17 +141,25 @@
         <section class="bakery-process">
             <div class="ms_container">
                 
+                <!-- first bakery process -->
                 <div class="first-third-bakery-process">
+
+                    <!-- first bakery process image -->
                     <img src="../assets/img/bakery-process-1.jpg" alt="first bakery process">
+
                     <div class="overlay">
+
+                        <!-- text at the top left -->
                         <div class="top_left">
                             Tell us what you have in mind
                         </div>
 
+                        <!-- text at the top right -->
                         <div class="top-right">
                             01
                         </div>
 
+                        <!-- text at the bottom right -->
                         <div class="bottom-right">
                             <div class="ms_categories">
                                 manual ingredient selection
@@ -163,31 +171,81 @@
                     </div>
                 </div>
                 
+                <!-- second bakery process -->
                 <div class="row gy-6">
-                    <div class="col">
+                    <div class="col second-bakery-process">
+
+                        <!-- second bakery process image -->
                         <img src="../assets/img/bakery-process-2.jpg" alt="second bakery process">
+
                         <div class="overlay">
+
+                            <!-- text at the top left -->
                             <div class="top_left">
                                 We Start Baking
                             </div>
 
+                            <!-- text at the top right -->
                             <div class="top-right">
                                 02
                             </div>
+
+                            <!-- text at the bottom left -->
+                            <div class="bottom-left">
+                                <div class="ms_categories">
+                                    sweet & delicious
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium tempore, nulla porro nemo laborum dolores nam quaerat iste itaque quam. Autem, velit perferendis quidem assumenda id repellendus obcaecati expedita.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col ms_text_col"></div>
+
+                    <!-- text col -->
+                    <div class="col ms_text_col">
+                        <div class="ms_categories">
+                            don't just take our word for it
+                        </div>
+
+                        <div class="ms_font">
+                            "Finally found an alternative to the mass produced products.
+                            Something that incorporates real organic ingredients, 
+                            nutrient dense wellness while promoting sustainability and activity."
+                        </div>
+
+                        <div class="ms_categories author">
+                            Rachel Cooper, Founder
+                        </div>
+                    </div>
                 </div>
 
+                <!-- third bakery process -->
                 <div class="first-third-bakery-process">
+
+                    <!-- third bakery process image -->
                     <img src="../assets/img/bakery-process-3.jpg" alt="third bakery process">
+
                     <div class="overlay">
+
+                        <!-- text at the top left -->
                         <div class="top_left">
                             Delivery to your home
                         </div>
 
+                        <!-- text at the top right -->
                         <div class="top-right">
                             03
+                        </div>
+
+                        <!-- text at the bottom left -->
+                        <div class="bottom-left">
+                            <div class="ms_categories">
+                                baked to order & gift wrapped
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium tempore, nulla porro nemo laborum dolores nam quaerat iste itaque quam. Autem, velit perferendis quidem assumenda id repellendus obcaecati expedita.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -278,7 +336,7 @@ export default {
 
             .top-right {
                 position: absolute;
-                top: 50px;
+                top: 40px;
                 right: 50px;
                 font-size: 3rem;
                 font-family: 'Work Sans', sans-serif;
@@ -287,31 +345,48 @@ export default {
 
             .bottom-left {
                 position: absolute;
-                bottom: 70px;
+                bottom: 40px;
                 left: 50px;
                 font-size: 2rem;
-                width: 350px;
+                width: 400px;
                 font-size: 0.8rem;
-
             }
 
             .bottom-right {
                 position: absolute;
-                bottom: 70px;
+                bottom: 50px;
                 right: 50px;
                 font-size: 2rem;
                 width: 350px;
                 font-size: 0.8rem;
             }
+
+            .ms_categories {
+                color: lightgray;
+            }
         }
 
         .ms_text_col {
-            background-color: #e9dedc;
+            background-color: #edecec;
             margin-left: 1.5rem;
             margin-right: 13px;
+            margin-block: 3rem;
+            padding-inline: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .ms_categories {
+                color: #313030;
+                margin-bottom: 1.5rem;
+
+                &.author {
+                    text-transform: capitalize;
+                }
+            }
         }
 
-        .col {
+        .second-bakery-process {
             margin-block: 3rem;
 
             &:first-child {
@@ -320,6 +395,10 @@ export default {
 
                 .overlay {
                     width: 96%;
+
+                    .bottom-left {
+                        width: 250px;
+                    }
                 }
             }
 
