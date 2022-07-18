@@ -378,6 +378,53 @@
                 </div>
             </div>
         </section>
+        
+        <section class="social">
+            <div class="ms_container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../assets/img/social-1.jpg" alt="">
+                    </div>
+
+                    <div class="col-6">
+                        <div class="ms_categories">
+                            made for sharing
+                        </div>
+
+                        <div class="ms_font">
+                            Let's stay in touch
+                        </div>
+
+                        <a href="#" class="btn btn_purple">
+                            <i class="fa-brands fa-instagram"></i>
+                            Follow Us
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <img src="../assets/img/social-2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <img src="../assets/img/social-3.jpg" alt="">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="../assets/img/social-5.jpg" alt="">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="../assets/img/social-4.jpg" alt="">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="../assets/img/social-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 </template>
@@ -577,6 +624,34 @@ export default {
                             margin-top: 0;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .social {
+        .row {
+            margin-block: 1.5rem;
+
+            .col-6 {
+                background-color: #edecec;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .ms_categories {
+                    font-size: 0.5rem;
+                }
+
+                .ms_font {
+                    font-size: 1.4rem;
+                    margin-block: 1rem;
+                }
+
+                .btn_purple {
+                    font-size: 9px;
+                    padding: 8px 18px;
                 }
             }
         }
