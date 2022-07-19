@@ -138,120 +138,7 @@
         </section>
 
         <!-- bakery process -->
-        <section class="bakery-process">
-            <div class="ms_container">
-                
-                <!-- first bakery process -->
-                <div class="first-third-bakery-process">
-
-                    <!-- first bakery process image -->
-                    <img src="../assets/img/bakery-process-1.jpg" alt="first bakery process">
-
-                    <div class="overlay">
-
-                        <!-- text at the top left -->
-                        <div class="top_left">
-                            Tell us what you have in mind
-                        </div>
-
-                        <!-- text at the top right -->
-                        <div class="top-right">
-                            01
-                        </div>
-
-                        <!-- text at the bottom right -->
-                        <div class="bottom-right">
-                            <div class="ms_categories">
-                                manual ingredient selection
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium tempore, nulla porro nemo laborum dolores nam quaerat iste itaque quam. Autem, velit perferendis quidem assumenda id repellendus obcaecati expedita.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- second bakery process -->
-                <div class="row gy-6">
-                    <div class="col second-bakery-process">
-
-                        <!-- second bakery process image -->
-                        <img src="../assets/img/bakery-process-2.jpg" alt="second bakery process">
-
-                        <div class="overlay">
-
-                            <!-- text at the top left -->
-                            <div class="top_left">
-                                We Start Baking
-                            </div>
-
-                            <!-- text at the top right -->
-                            <div class="top-right">
-                                02
-                            </div>
-
-                            <!-- text at the bottom left -->
-                            <div class="bottom-left">
-                                <div class="ms_categories">
-                                    sweet & delicious
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium tempore, nulla porro nemo laborum dolores nam quaerat iste itaque quam. Autem, velit perferendis quidem assumenda id repellendus obcaecati expedita.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- text col -->
-                    <div class="col ms_text_col">
-                        <div class="ms_categories">
-                            don't just take our word for it
-                        </div>
-
-                        <div class="ms_font">
-                            "Finally found an alternative to the mass produced products.
-                            Something that incorporates real organic ingredients, 
-                            nutrient dense wellness while promoting sustainability and activity."
-                        </div>
-
-                        <div class="ms_categories author">
-                            Rachel Cooper, Founder
-                        </div>
-                    </div>
-                </div>
-
-                <!-- third bakery process -->
-                <div class="first-third-bakery-process">
-
-                    <!-- third bakery process image -->
-                    <img src="../assets/img/bakery-process-3.jpg" alt="third bakery process">
-
-                    <div class="overlay">
-
-                        <!-- text at the top left -->
-                        <div class="top_left">
-                            Delivery to your home
-                        </div>
-
-                        <!-- text at the top right -->
-                        <div class="top-right">
-                            03
-                        </div>
-
-                        <!-- text at the bottom left -->
-                        <div class="bottom-left">
-                            <div class="ms_categories">
-                                baked to order & gift wrapped
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium tempore, nulla porro nemo laborum dolores nam quaerat iste itaque quam. Autem, velit perferendis quidem assumenda id repellendus obcaecati expedita.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        <BakeryProcess/>
 
         <!-- locations -->
         <section class="locations">
@@ -324,7 +211,7 @@
                     </div>
 
                     <!-- col -->
-                    <div id="lightpink" class="col">
+                    <div id="beige" class="col">
 
                         <!-- card -->
                         <div class="ms_card">
@@ -387,7 +274,7 @@
                         <img src="../assets/img/social-1.jpg" alt="">
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-6"> <!-- TODO fix this! -->
                         <div class="ms_categories">
                             made for sharing
                         </div>
@@ -447,8 +334,13 @@
 </template>
 
 <script>
+import BakeryProcess from '@/components/BakeryProcess.vue'
+
 export default {
-   name: "MainComponent"
+   name: "MainComponent",
+   components: {
+    BakeryProcess
+   }
 }
 </script>
 
@@ -456,9 +348,8 @@ export default {
 @import '@/style/common';
 @import '@/style/variables';
 
-    // sfrutto il margin collapse per non scrivere troppo css ripetuto 
     section {
-        margin-block: 9.4rem;    
+        margin-top: 9.4rem;    
     }
 
     .products {
@@ -504,112 +395,7 @@ export default {
         }
     }
 
-    .bakery-process {
-        .overlay {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.4);
-            width: 100%;
-            height: 100%;
-
-            color: $tertiary-font-color;
-
-            .top_left {
-                position: absolute;
-                top: 50px;
-                left: 50px;
-                font-size: 2rem;
-                font-weight: bold;
-                font-family: 'Playfair Display', serif;
-            }
-
-            .top-right {
-                position: absolute;
-                top: 40px;
-                right: 50px;
-                font-size: 3rem;
-                font-family: 'Work Sans', sans-serif;
-                font-weight: 100;
-            }
-
-            .bottom-left {
-                position: absolute;
-                bottom: 40px;
-                left: 50px;
-                font-size: 2rem;
-                width: 400px;
-                font-size: 0.8rem;
-            }
-
-            .bottom-right {
-                position: absolute;
-                bottom: 50px;
-                right: 50px;
-                font-size: 2rem;
-                width: 350px;
-                font-size: 0.8rem;
-            }
-
-            .ms_categories {
-                color: lightgray;
-            }
-        }
-
-        .ms_text_col {
-            background-color: #edecec;
-            margin-left: 1.5rem;
-            margin-right: 13px;
-            margin-block: 3rem;
-            padding-inline: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            .ms_categories {
-                color: #313030;
-                margin-bottom: 1.5rem;
-
-                &.author {
-                    text-transform: capitalize;
-                }
-            }
-        }
-
-        .second-bakery-process {
-            margin-block: 3rem;
-
-            &:first-child {
-                margin-right: 1.5rem;
-                position: relative;
-
-                .overlay {
-                    width: 96%;
-
-                    .bottom-left {
-                        width: 250px;
-                    }
-                }
-            }
-
-            img {
-                aspect-ratio: 1/1;
-                object-fit: cover;
-                object-position: right;
-            }
-        }
-
-        .first-third-bakery-process {
-            position: relative; 
-
-            img {
-                object-fit: cover;
-            }
-        }
-
-        
-    }
+    
 
     .locations {
         .ms_info {
@@ -621,11 +407,11 @@ export default {
             text-align: center;
 
             &#lightblue {
-                background-color: #e1f6fd;
+                background-color: #f1f9fb;
             }
 
-            &#lightpink {
-                background-color: #fae9ec;
+            &#beige {
+                background-color: #faf3e3;
             }
 
             .ms_card {
@@ -651,11 +437,12 @@ export default {
             margin-block: 1.5rem;
 
             .col-6 {
-                background-color: #edecec;
+                background-color: #f7f0f2;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                padding: 0;
 
                 .ms_categories {
                     font-size: 0.5rem;

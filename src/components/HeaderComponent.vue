@@ -9,13 +9,13 @@
 
         <!-- menu -->
         <ul class="ms_main_menu col">
-            <HeaderMenu v-for="(link, index) in menuLinks" :key="index" :text="link.text" :url="link.url" />
-        
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </li>
+          <HeaderMenu v-for="(link, index) in menuLinks" :key="index" :text="link.text" :url="link.url" />
+      
+          <li>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
         </ul>
     </nav>
 
@@ -70,10 +70,6 @@ export default {
         },
         {
           text: 'my account',
-          url: '#'
-        },
-        {
-          text: <i class="fa-solid fa-cart-shopping"></i>,
           url: '#'
         }
       ]
