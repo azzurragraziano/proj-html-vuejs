@@ -1,62 +1,7 @@
 <template>
     <main>
         <!-- our products -->
-        <section class="products">
-            <div class="ms_container">
-                <div class="row">
-
-                    <!-- col with text -->
-                    <div class="col-4">
-
-                        <span class="ms_categories">
-                            our products
-                        </span>
-
-                        <p class="ms_font">
-                            All our delectable pastries are backed fresh in our Kitchen every morning, and are made with all-natural, all organic ingredients.
-                        </p>
-
-                        <!-- button -->
-                        <span>
-                            <a type="button" class="btn btn_purple">Start Shopping</a>
-                        </span>
-
-                    </div>
-
-                    <!-- col with images -->
-                    <div class="col-8">
-                        <div class="row">
-
-                            <!-- left col -->
-                            <div class="col">
-                                <div class="ms_card">
-                                    <!-- chevron -->
-                                    <span>
-                                        <i class="fa-solid fa-chevron-left"></i>
-                                    </span>
-
-                                    <!-- image -->
-                                    <img src="../assets/img/choco-chip-cookies.jpg" alt="choco chip cookies">
-                                </div>
-                            </div>
-
-                            <!-- right col -->
-                            <div class="col">
-                                <div class="ms_card">
-                                    <!-- chevron -->
-                                    <span>
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </span>
-
-                                    <!-- image -->
-                                    <img src="../assets/img/strawberry-jam-cookies.jpg" alt="strawberry jam cookies">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <ProductsSection />
 
         <!-- corporate e weddings -->
         <section class="corp-wed">
@@ -331,12 +276,14 @@
 </template>
 
 <script>
+import ProductsSection from '@/components/ProductsSection.vue'
 import BakeryProcess from '@/components/BakeryProcess.vue'
 import SocialSection from '@/components/SocialSection.vue'
 
 export default {
    name: "MainComponent",
    components: {
+    ProductsSection,
     BakeryProcess,
     SocialSection
    }
@@ -349,40 +296,6 @@ export default {
 
     section {
         margin-top: 9.4rem;
-    }
-
-    .products {
-        .ms_font {
-            margin-block: 1rem 3rem;
-            font-size: 1.4rem;
-        }
-
-        .col {
-            position: relative;
-            font-size: 10px;
-            color: white;
-
-            span {
-                position: absolute;
-                top: 45%;
-                
-                i {
-                    padding: 20px 8px;
-                    background-color: rgba(86, 50, 139, 0.5);
-                }                
-            } 
-            &:first-child {
-                span {
-                    left: 13px;          
-                }
-            }
-
-            &:last-child {
-                span {
-                    right: 13px;    
-                }
-            }
-        }
     }
 
     .corp-wed {
