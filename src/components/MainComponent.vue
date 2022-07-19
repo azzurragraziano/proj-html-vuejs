@@ -12,8 +12,11 @@
                             our products
                         </span>
 
-                        <p class="ms_font">All our delectable pastries are backed fresh in our Kitchen every morning, and are made with all-natural, all organic ingredients.</p>
+                        <p class="ms_font">
+                            All our delectable pastries are backed fresh in our Kitchen every morning, and are made with all-natural, all organic ingredients.
+                        </p>
 
+                        <!-- button -->
                         <span>
                             <a type="button" class="btn btn_purple">Start Shopping</a>
                         </span>
@@ -23,13 +26,31 @@
                     <!-- col with images -->
                     <div class="col-8">
                         <div class="row">
-                            <!-- TODO arrow -->
+
+                            <!-- left col -->
                             <div class="col">
-                                <img src="../assets/img/choco-chip-cookies.jpg" alt="choco chip cookies">
+                                <div class="ms_card">
+                                    <!-- chevron -->
+                                    <span>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </span>
+
+                                    <!-- image -->
+                                    <img src="../assets/img/choco-chip-cookies.jpg" alt="choco chip cookies">
+                                </div>
                             </div>
 
+                            <!-- right col -->
                             <div class="col">
-                                <img src="../assets/img/strawberry-jam-cookies.jpg" alt="choco chip cookies">
+                                <div class="ms_card">
+                                    <!-- chevron -->
+                                    <span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </span>
+
+                                    <!-- image -->
+                                    <img src="../assets/img/strawberry-jam-cookies.jpg" alt="strawberry jam cookies">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,6 +86,8 @@
         <section class="shopping">
             <div class="ms_container">
                 <div class="row">
+
+                    <!-- col with text -->
                     <div class="col-4">
                         <h2 class="ms_font">
                             Find a freshly backed <br> product perfect for you
@@ -74,6 +97,7 @@
                             Corporis aut ut nulla natus reiciendis doloremque veritatis debitis odit dolorum ipsam dolores, quae vero, exercitationem dolorem.
                         </span>
 
+                        <!-- button -->
                         <div>
                             <a type="button" class="btn btn_purple">Shop All Pruducts</a>
                         </div>
@@ -81,10 +105,17 @@
 
                     <div class="col-8">
                         <div class="row">
+
+                            <!-- first product -->
                             <div class="col">
-<!-- TODO arrow -->
                                 <!-- image -->
                                 <div class="card_image">
+                                    <!-- chevron -->
+                                    <span id="left-chevron">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </span>
+
+                                    <!-- image -->
                                     <img src="../assets/img/choco-chip-cookies.jpg" alt="Choco Chip Cookies">
                                 </div>
 
@@ -95,6 +126,7 @@
                                 </div>
                             </div>
 
+                            <!-- second product -->
                             <div class="col">
                                 <!-- image -->
                                 <div class="card_image">
@@ -108,6 +140,7 @@
                                 </div>
                             </div>
 
+                            <!-- third product -->
                             <div class="col">
                                 <!-- image -->
                                 <div class="card_image">
@@ -121,9 +154,16 @@
                                 </div>
                             </div>
 
+                            <!-- fourth product -->
                             <div class="col">
                                 <!-- image -->
                                 <div class="card_image">
+                                    <!-- chevron -->
+                                    <span id="right-chevron">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </span>
+
+                                    <!-- image -->
                                     <img src="../assets/img/perfect-macarons.jpg" alt="Perfect Macarons">
                                 </div>
 
@@ -314,8 +354,35 @@ export default {
     .products {
         .ms_font {
             margin-block: 1rem 3rem;
+            font-size: 1.4rem;
         }
 
+        .col {
+            position: relative;
+            font-size: 10px;
+            color: white;
+
+            span {
+                position: absolute;
+                top: 45%;
+                
+                i {
+                    padding: 20px 8px;
+                    background-color: rgba(86, 50, 139, 0.5);
+                }                
+            } 
+            &:first-child {
+                span {
+                    left: 13px;          
+                }
+            }
+
+            &:last-child {
+                span {
+                    right: 13px;    
+                }
+            }
+        }
     }
 
     .corp-wed {
@@ -338,6 +405,33 @@ export default {
         }
 
         .col-8 {
+            .card_image {
+                position: relative;
+                font-size: 10px;
+                color: white;
+
+                span {
+                    position: absolute;
+                    top: 45%;
+                    
+                    i {
+                        padding: 20px 8px;
+                        background-color: rgba(86, 50, 139, 0.5);
+                    }       
+                    
+                    &#left-chevron {
+                        left: 0;          
+                    }
+                    
+                    &#right-chevron {
+                        right: 0;    
+                    }
+                    
+                } 
+
+                
+            }
+
             .card_text {
                 text-align: center;
 

@@ -8,7 +8,7 @@
                 The Perfect Fresh Bread
             </h1>
             <div class="ms_description">
-                Architecto debitis laborum totam, voluptate officiis atque obcaecati provident! Ipsam, ducimus! Adipisci cumque autem id veniam dolor.
+                Cras consequat lectus vestibulum tortor pulvinar, quis euismond nisl varius. Aliquam erat volutpat. Nullam quis sagittis nibh ac nulla id orci tempor. 
             </div>
 
             <a type="button" class="btn btn-light btn_white">Explore our products</a>
@@ -44,6 +44,10 @@ export default {
 
         h1 {
             font-weight: 800;
+        }
+
+        .ms_description {
+            width: 370px;
         }
     }
 
