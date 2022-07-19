@@ -7,22 +7,23 @@
 
                     <!-- col with text -->
                     <div class="col-4">
-                        
+
                         <span class="ms_categories">
                             our products
                         </span>
 
                         <p class="ms_font">All our delectable pastries are backed fresh in our Kitchen every morning, and are made with all-natural, all organic ingredients.</p>
-                    
+
                         <span>
                             <a type="button" class="btn btn_purple">Start Shopping</a>
                         </span>
-                        
+
                     </div>
 
                     <!-- col with images -->
                     <div class="col-8">
                         <div class="row">
+                            <!-- TODO arrow -->
                             <div class="col">
                                 <img src="../assets/img/choco-chip-cookies.jpg" alt="choco chip cookies">
                             </div>
@@ -81,6 +82,7 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col">
+<!-- TODO arrow -->
                                 <!-- image -->
                                 <div class="card_image">
                                     <img src="../assets/img/choco-chip-cookies.jpg" alt="Choco Chip Cookies">
@@ -170,7 +172,7 @@
 
                             <!-- text card -->
                             <div class="text_card">
-                                
+
                                 <!-- city -->
                                 <h2 class="ms_font">
                                     New York
@@ -265,54 +267,9 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- social -->
-        <section class="social">
-            <div class="ms_container">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="../assets/img/social-1.jpg" alt="">
-                    </div>
-
-                    <div class="col-6"> <!-- TODO fix this! -->
-                        <div class="ms_categories">
-                            made for sharing
-                        </div>
-
-                        <div class="ms_font">
-                            Let's stay in touch
-                        </div>
-
-                        <a href="#" class="btn btn_purple">
-                            <i class="fa-brands fa-instagram"></i>
-                            Follow Us
-                        </a>
-                    </div>
-
-                    <div class="col-3">
-                        <img src="../assets/img/social-2.jpg" alt="">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3">
-                        <img src="../assets/img/social-3.jpg" alt="">
-                    </div>
-
-                    <div class="col-3">
-                        <img src="../assets/img/social-5.jpg" alt="">
-                    </div>
-
-                    <div class="col-3">
-                        <img src="../assets/img/social-4.jpg" alt="">
-                    </div>
-
-                    <div class="col-3">
-                        <img src="../assets/img/social-6.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <SocialSection/>
 
         <!-- banner -->
         <section class="banner">
@@ -335,11 +292,13 @@
 
 <script>
 import BakeryProcess from '@/components/BakeryProcess.vue'
+import SocialSection from '@/components/SocialSection.vue'
 
 export default {
    name: "MainComponent",
    components: {
-    BakeryProcess
+    BakeryProcess,
+    SocialSection
    }
 }
 </script>
@@ -349,7 +308,7 @@ export default {
 @import '@/style/variables';
 
     section {
-        margin-top: 9.4rem;    
+        margin-top: 9.4rem;
     }
 
     .products {
@@ -372,7 +331,7 @@ export default {
                 margin-block: 1rem;
             }
 
-            div 
+            div
             {
                 margin-block: 1rem;
             }
@@ -395,8 +354,6 @@ export default {
         }
     }
 
-    
-
     .locations {
         .ms_info {
             text-align: center;
@@ -416,46 +373,17 @@ export default {
 
             .ms_card {
                 .text_card {
-                    padding: 1rem 3rem 2rem;  
-                    
+                    padding: 1rem 3rem 2rem;
+
                     .col {
                         .ms_categories:first-child {
                             font-size: 9px;
                         }
-                                
+
                         .btn_white {
                             margin-top: 0;
                         }
                     }
-                }
-            }
-        }
-    }
-
-    .social {
-        .row {
-            margin-block: 1.5rem;
-
-            .col-6 {
-                background-color: #f7f0f2;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 0;
-
-                .ms_categories {
-                    font-size: 0.5rem;
-                }
-
-                .ms_font {
-                    font-size: 1.4rem;
-                    margin-block: 1rem;
-                }
-
-                .btn_purple {
-                    font-size: 9px;
-                    padding: 8px 18px;
                 }
             }
         }
@@ -469,7 +397,7 @@ export default {
         .text {
             margin: 10rem;
             padding-block: 3.5rem;
-            width: 530px; 
+            width: 530px;
 
             .ms_font {
                 color: white;
