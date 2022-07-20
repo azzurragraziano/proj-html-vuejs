@@ -4,7 +4,7 @@
         <ProductsSection />
 
         <!-- corporate e weddings -->
-        <section class="corp-wed">
+        <section class="events">
             <div class="ms_container">
 
                 <span class="ms_categories">
@@ -17,11 +17,44 @@
 
                 <div class="row gx-5">
                     <div class="col">
-                        <img src="../assets/img/wedding-bg.jpg" alt="corporate">
+                        <div class="corporate">
+                            <div class="overlay">
+                                <div class="ms_categories">
+                                    international bakery
+                                </div>
+
+                                <div class="ms_font">
+                                    corporate events
+                                </div>
+                           
+
+                                <!-- button -->
+                                <div>
+                                    <a href="#" class="btn btn_purple">Explore more</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col">
-                        <img src="../assets/img/wedding-bg.jpg" alt="weddings">
+                        <div class="wedding">
+                            
+                            <div class="overlay">
+                                <div class="ms_categories">
+                                    private dining hall
+                                </div>
+
+                                <div class="ms_font">
+                                    weddings & parties
+                                </div>
+                           
+
+                                <!-- button -->
+                                <div>
+                                    <a href="#" class="btn btn_purple">Explore more</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,14 +87,20 @@
                             <!-- first product -->
                             <div class="col">
                                 <!-- image -->
-                                <div class="card_image">
+                                <div id="choco-cookies" class="card_image">
                                     <!-- chevron -->
                                     <span id="left-chevron">
                                         <i class="fa-solid fa-chevron-left"></i>
                                     </span>
 
                                     <!-- image -->
-                                    <img src="../assets/img/choco-chip-cookies.jpg" alt="Choco Chip Cookies">
+                                    <!-- <img src="../assets/img/choco-chip-cookies.jpg" alt="Choco Chip Cookies"> -->
+
+                                    <div class="overlay">
+                                        <div>
+                                            SELECT OPTIONS / QUICK VIEW
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- text -->
@@ -298,10 +337,62 @@ export default {
         margin-top: 9.4rem;
     }
 
-    .corp-wed {
+    .events {
         text-align: center;
-    }
 
+        .overlay {
+            display: none;
+        }
+
+        .ms_categories {
+            color: #e8e5e5;
+        }
+
+
+        .ms_font {
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            margin-block: 1.5rem;
+            color: white;
+        }
+    
+        .corporate {
+            background-image: url('../assets/img/corporate-bg.jpg');
+            background-size: cover;
+            height: 610px;
+
+            &:hover {
+
+                background-image: url('../assets/img/corporate-hover-bg.jpg');
+
+                .overlay {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .wedding {
+            background-image: url('../assets/img/wedding-bg.jpg');
+            background-size: cover;
+            height: 610px;
+
+            &:hover {
+
+                background-image: url('../assets/img/wedding-hover-bg.jpg');
+
+                .overlay {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    
     .shopping {
         .col-4 {
             text-align: center;
@@ -318,10 +409,29 @@ export default {
         }
 
         .col-8 {
+
+            .overlay {
+                display: none;
+            }
+
             .card_image {
                 position: relative;
                 font-size: 10px;
                 color: white;
+
+                &#choco-cookies {
+                    background-image: url('../assets/img/choco-chip-cookies.jpg');
+                    background-size: cover;
+                    height: 265px;
+
+                    &:hover {
+                        .overlay {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
 
                 span {
                     position: absolute;

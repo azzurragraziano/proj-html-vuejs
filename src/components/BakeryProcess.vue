@@ -161,13 +161,7 @@ export default {
             color: white;
 
             .overlay {
-                position: relative;
-                left: 50%;
                 top: 0;
-                transform: translate(-50%, 0);
-                background-color: rgba(0, 0, 0, 0.4);
-                width: 100%;
-                height: 100%;
 
                 .ms_card {
                     height: 100%;
